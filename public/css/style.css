@@ -21,4 +21,146 @@
     font-size: 40px;
 }
 
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heading-section
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px 30px 50px;
+}
+
+.heading-title
+{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+#add-new-device
+{
+    background-color: #212121;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+#titleimage {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.device-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.device-image img
+{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.my-device
+{
+    margin: 20px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    border-radius: 20px;
+}
+
+.device-content
+{
+    width: 300px;
+    padding: 20px;
+    background-color: #e7e6e6;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.button-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button-container button
+{
+    padding: 7px 10px 7px 10px;
+    border: 0;
+    color: white;
+    border-radius: 10px;
+}
+
+#edit-button
+{
+    background-color: rgb(145, 19, 171);
+}
+
+#analyze-button
+{
+    background-color: rgb(26, 26, 117);
+}
+
+.horizontal
+{
+    width: 100%;
+    height: 0.1px;
+    background-color: #8e8e8e;
+    margin-bottom: 10px;
+}
+
+.prop-title
+{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.input-label
+{
+    color: #212121;
+    font-weight: 600;
+    color: #212121 !important;
+}
+
+.input-control
+{
+    width: 100%;
+    border-radius: 10px !important;
+    margin: 0px 0px 20px 0px;
+}
+
+/* .modal-content
+{
+    color: white !important;
+    background-color: #bfbfbf !important;
+} */
+
+.modal-header
+{
+    /* background-color: #212121 !important; */
+    /* color: white; */
+    font-size: 22px;
+}
+
+/* .modal-footer
+{
+    background-color: #808080 !important;
+    color: white;
+} */
 /* DASHBOARD STYLE END */

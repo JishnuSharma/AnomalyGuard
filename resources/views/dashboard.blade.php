@@ -5,18 +5,58 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    <div id="dashboard-name">
-                        {{ auth()->user()->name}}
+    <div class="container">
+        <div class="heading-section">
+            <div class="heading-title">
+                MY DEVICES
+            </div>
+            <div class="heading-button">
+                <button id="add-new-device" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add New Device
+                </button>
+            </div>
+        </div>
+        <div class="device-section">
+            <div class="my-device">
+                <div class="device-image">
+                    <img src="{{ asset('images/7.jpg') }}" id="titleimage" alt="Title Image">
+                </div>
+                <div class="device-content">
+                    <div class="content-element">
+                        <div class="prop-title">ID</div>AER5543
                     </div>
-                    <div id="dashboard-email">
-                        {{ auth()->user()->email}}
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">NAME</div>Furnance Temperature Seonor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">TYPE</div>Temperature Sensor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">DATA TYPE</div>Numeric
+                    </div>
+                    <div class="horizontal"></div>
+
+                    <div class="content-element">
+                        <div class="prop-title">ADDED ON</div>03-04-2024
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="button-section">
+                        <div class="button-container">
+                            <button id="edit-button">
+                                Edit Details
+                            </button>
+                            <button id="analyze-button">
+                                Analyze
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    @include('components.device-modal')
 </x-app-layout>
