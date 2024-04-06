@@ -1,0 +1,24 @@
+/* DASHBOARD STYLE START */
+
+#dashboard-name
+{
+    font-size: 30px;
+}
+
+#dashboard-email
+{
+    font-size: 20px;
+}
+
+.select-width
+{
+    width: 100%;
+}
+
+#text-logo
+{
+    color: #212121;
+    font-size: 40px;
+}
+
+/* DASHBOARD STYLE END */
