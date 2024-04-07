@@ -1,4 +1,26 @@
 /* DASHBOARD STYLE START */
+/* Width */
+::-webkit-scrollbar {
+    width: 5px; /* Change scrollbar width */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Change scrollbar track color */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #28282B; /* Change scrollbar handle color */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Change scrollbar handle color on hover */
+}
+
+
+
 
 #dashboard-name
 {
@@ -145,6 +167,12 @@
     margin: 0px 0px 20px 0px;
 }
 
+.file-control
+{
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+}
+
 /* .modal-content
 {
     color: white !important;
@@ -156,6 +184,12 @@
     /* background-color: #212121 !important; */
     /* color: white; */
     font-size: 22px;
+    background-color: #28282B !important;
+}
+
+.btn-close
+{
+    color: white !important;
 }
 
 /* .modal-footer
@@ -163,4 +197,102 @@
     background-color: #808080 !important;
     color: white;
 } */
+
+.table-head-row
+{
+    background-color: #28282B !important;
+    color: white;
+}
+
+.file-upload-head
+{
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.point-element
+{
+    padding: 10px;
+}
+
+.point-element i
+{
+    margin-right: 10px;
+}
+
+.more-information
+{
+    margin-top: 20px;
+}
+
+/* .intro-image
+{
+    margin-top: 30px;
+} */
+
+.intro-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.intro-head
+{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.intro-content
+{
+    width: 400px;
+    text-align: justify;
+}
+
+.feature-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.feature-section-head
+{
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.feature {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-bottom: 20px;
+}
+
+.feature-number {
+    width: 40px; 
+    height: 40px; 
+    background-color: #28282b; 
+    color: #ffffff; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    margin-right: 10px; 
+}
+
+.feature-section-contnet {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+.feature-section {
+    flex: 1;
+    margin-right: 20px; /* Adjust spacing between sections */
+}
+
 /* DASHBOARD STYLE END */

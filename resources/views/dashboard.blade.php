@@ -11,7 +11,7 @@
                 MY DEVICES
             </div>
             <div class="heading-button">
-                <button id="add-new-device" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button id="add-new-device" data-bs-toggle="modal" data-bs-target="#deviceModal">
                     Add New Device
                 </button>
             </div>
@@ -45,7 +45,7 @@
                     <div class="horizontal"></div>
                     <div class="button-section">
                         <div class="button-container">
-                            <button id="edit-button">
+                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
                                 Edit Details
                             </button>
                             <button id="analyze-button">
