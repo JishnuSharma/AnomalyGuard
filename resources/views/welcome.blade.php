@@ -46,48 +46,55 @@
                 FEATURES WE OFFER
             </div>
             <div class="feature-section-contnet">
-    <div class="feature-section">
-        <div class="feature">
-            <div class="feature-number">1</div>
-            <div class="feature-content">
-                A robust anomaly detection algorithm which helps to identify anomalies in your IOT dataset.
+                <div class="inner-feature-section">
+                    <div class="feature">
+                        <div class="feature-number">1</div>
+                        <div class="feature-content">
+                            A robust anomaly detection algorithm which helps to identify anomalies in your IOT dataset.
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-number">2</div>
+                        <div class="feature-content">
+                            A platform which helps you to keep track of your devices across multiple IOT environments.
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-number">3</div>
+                        <div class="feature-content">
+                            A highly adaptable machine learning algorithm which helps to detect different hidden patterns within the dataset
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-number">4</div>
+                        <div class="feature-content">
+                            A platfrom to store device related files in order to make sure you are able to keep track of your vast IOT environments.
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-number">5</div>
+                        <div class="feature-content">
+                        A platform offering guidance from device registration to insights derivation
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-number">6</div>
+                        <div class="feature-content">
+                            A platform which helps to provide a personal tracking system for a vast ecosystem of IOT networks
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="feature">
-            <div class="feature-number">2</div>
-            <div class="feature-content">
-                A robust anomaly detection algorithm which helps to identify anomalies in your IOT dataset.
+        <div class="need-of-section-container">
+            <div class="need-of-head">
+                NEED OF ANOMALY DETECTION IN IOT DEVICES
             </div>
-        </div>
-        <div class="feature">
-            <div class="feature-number">3</div>
-            <div class="feature-content">
-                A robust anomaly detection algorithm which helps to identify anomalies in your IOT dataset.
+            <div class="need-of-section">
+                <div class="need-container">
+                    
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="feature-section">
-        <div class="feature">
-            <div class="feature-number">4</div>
-            <div class="feature-content">
-                A robust anomaly detection algorithm which helps to identify anomalies in your IOT dataset.
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-number">5</div>
-            <div class="feature-content">
-                A robust anomaly detection algorithm which helps to identify anomalies in your IOT dataset.
-            </div>
-        </div>
-        <div class="feature">
-            <div class="feature-number">6</div>
-            <div class="feature-content">
-                A robust anomaly detection algorithm which helps to identify anomalies in your IOT dataset.
-            </div>
-        </div>
-    </div>
-</div>
-
         </div>
     </body>
 </html>

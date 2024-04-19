@@ -23,11 +23,11 @@
                 </div>
                 <div class="device-content">
                     <div class="content-element">
-                        <div class="prop-title">ID</div>AER5543
+                        <div class="prop-title">ID</div>EER433E
                     </div>
                     <div class="horizontal"></div>
                     <div class="content-element">
-                        <div class="prop-title">NAME</div>Furnance Temperature Seonor
+                        <div class="prop-title">NAME</div>Bedroom Temperature Seonor
                     </div>
                     <div class="horizontal"></div>
                     <div class="content-element">
@@ -40,7 +40,121 @@
                     <div class="horizontal"></div>
 
                     <div class="content-element">
-                        <div class="prop-title">ADDED ON</div>03-04-2024
+                        <div class="prop-title">ADDED ON</div>07-04-2024
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="button-section">
+                        <div class="button-container">
+                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
+                                Edit Details
+                            </button>
+                            <button id="analyze-button">
+                                Analyze
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-device">
+                <div class="device-image">
+                    <img src="{{ asset('images/6.jpg') }}" id="titleimage" alt="Title Image">
+                </div>
+                <div class="device-content">
+                    <div class="content-element">
+                        <div class="prop-title">ID</div>FFRER43
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">NAME</div>Industry Humidity Seonor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">TYPE</div>Humidity Sensor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">DATA TYPE</div>Numeric
+                    </div>
+                    <div class="horizontal"></div>
+
+                    <div class="content-element">
+                        <div class="prop-title">ADDED ON</div>05-04-2024
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="button-section">
+                        <div class="button-container">
+                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
+                                Edit Details
+                            </button>
+                            <button id="analyze-button">
+                                Analyze
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-device">
+                <div class="device-image">
+                    <img src="{{ asset('images/5.jpg') }}" id="titleimage" alt="Title Image">
+                </div>
+                <div class="device-content">
+                    <div class="content-element">
+                        <div class="prop-title">ID</div>CCDERE3
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">NAME</div>Garage Smoke Seonor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">TYPE</div>Smoke Sensor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">DATA TYPE</div>Numeric
+                    </div>
+                    <div class="horizontal"></div>
+
+                    <div class="content-element">
+                        <div class="prop-title">ADDED ON</div>09-04-2024
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="button-section">
+                        <div class="button-container">
+                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
+                                Edit Details
+                            </button>
+                            <button id="analyze-button">
+                                Analyze
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-device">
+                <div class="device-image">
+                    <img src="{{ asset('images/4.jpg') }}" id="titleimage" alt="Title Image">
+                </div>
+                <div class="device-content">
+                    <div class="content-element">
+                        <div class="prop-title">ID</div>KKRRKES
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">NAME</div>Car Temperature Sensor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">TYPE</div>Temperature Sensor
+                    </div>
+                    <div class="horizontal"></div>
+                    <div class="content-element">
+                        <div class="prop-title">DATA TYPE</div>Numeric
+                    </div>
+                    <div class="horizontal"></div>
+
+                    <div class="content-element">
+                        <div class="prop-title">ADDED ON</div>10-04-2024
                     </div>
                     <div class="horizontal"></div>
                     <div class="button-section">

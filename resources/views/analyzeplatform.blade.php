@@ -70,6 +70,64 @@
                 </div>
             </form>
         </div>
+        <div class="heading-title mt-4 pt-4" id="statical-headiing">
+            Statistical Derived
+        </div>
+        <div class="col-12 mt-4 pt-4 d-flex align-items-center justify-content-center">
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
+                <div class="metric-heading">
+                    Total Number of Readings
+                </div>
+                <div class="metric-value">
+                    18439
+                </div>
+            </div>
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
+                <div class="metric-heading">
+                    Total Number of Anomalies
+                </div>
+                <div class="metric-value">
+                    1774
+                </div>
+            </div>
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
+                <div class="metric-heading">
+                    Percentage of Anomalies
+                </div>
+                <div class="metric-value">
+                    9.6%
+                </div>
+            </div>
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
+                <div class="metric-heading">
+                    Device Status
+                </div>
+                <div class="metric-value correct">
+                    Functioning Properly
+                </div>
+            </div>
+        </div>
+        <div class="heading-title mt-4 pt-4" id="statical-headiing">
+            Visual Derived
+        </div>
+        <div class="container mb-4 pb-4">
+            <div class="row justify-content-center d-flex flex-column align-items-center mb-4 ">
+                <div class="col-auto">
+                    <img src="{{ asset('images/like1.jpg') }}" class="img-fluid static-images" width="800" alt="Title Image">
+                </div>
+                <div class="col-auto image-descriptions mt-4 ">
+                    Scattter Plot for The Dataset
+                </div>
+            </div>
+            <div class="row justify-content-center d-flex align-items-center flex-column">
+                <div class="col-auto">
+                    <img src="{{ asset('images/like3.jpg') }}" class="img-fluid" width="800"  alt="Title Image">
+                </div>
+                <div class="col-auto image-descriptions mt-4 ">
+                    Bar Chart Plot for The Dataset
+                </div>
+            </div>
+        </div>
     </div>
 
     @include('components.analysis-instructions')
