@@ -255,6 +255,8 @@
 {
     font-size: 35px;
     font-weight: 800;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .feature-section {
@@ -263,14 +265,22 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    flex-direction: column;
+    /* flex-direction: column; */
+}
+
+.feature-section-contnet
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
 }
 
 /* Style for each feature card */
 .feature {
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
@@ -278,6 +288,14 @@
     margin: 20px;
     max-width: 300px; /* Adjust max-width as per your design */
     text-align: center;
+    transition: all 0.9s ease-in-out;
+    cursor: pointer;
+}
+
+.feature:hover
+{
+    transform: scale(1.1);
+    box-shadow: 10px 10px #28282B;
 }
 
 .inner-feature-section
@@ -293,6 +311,11 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    background-color: #28282B;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 /* Style for feature content */
@@ -343,4 +366,68 @@
 .correct
 {
     background-color: rgb(222, 255, 173);
+}
+
+/* NEED OF SECTION */
+.need-of-head
+{
+    font-size: 35px;
+    font-weight: 800;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.need-of-section-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.need-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.need-of-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.need-container {
+    margin: 30px 0px 10px 0px;
+    box-shadow: 1px 3px 13px 5px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.need-pointer
+{
+    background-color: #28282B;
+    color: white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 100%;
+    margin-right: 10px;
+    padding: 20px;
+    font-size: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.need-content
+{
+    font-size: 20px;
+    padding: 20px;
 }
