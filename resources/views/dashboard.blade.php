@@ -17,160 +17,56 @@
             </div>
         </div>
         <div class="device-section">
-            <div class="my-device">
-                <div class="device-image">
-                    <img src="{{ asset('images/7.jpg') }}" id="titleimage" alt="Title Image">
-                </div>
-                <div class="device-content">
-                    <div class="content-element">
-                        <div class="prop-title">ID</div>EER433E
+            @forelse($device_data as $device)
+                <div class="my-device">
+                    <div class="device-image">
+                        <img src="{{ asset('images/' . rand(1, 7) . '.jpg') }}" id="titleimage" alt="Title Image">
                     </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">NAME</div>Bedroom Temperature Seonor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">TYPE</div>Temperature Sensor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">DATA TYPE</div>Numeric
-                    </div>
-                    <div class="horizontal"></div>
+                    <div class="device-content">
+                        <div class="content-element">
+                            <div class="prop-title">ID</div>{{$device->device_id}}
+                        </div>
+                        <div class="horizontal"></div>
+                        <div class="content-element">
+                            <div class="prop-title">NAME</div>{{$device->device_name}}
+                        </div>
+                        <div class="horizontal"></div>
+                        <div class="content-element">
+                            <div class="prop-title">TYPE</div>{{$device->device_type}}
+                        </div>
+                        <div class="horizontal"></div>
+                        <div class="content-element">
+                            <div class="prop-title">DATA TYPE</div>{{$device->data_type}}
+                        </div>
+                        <div class="horizontal"></div>
 
-                    <div class="content-element">
-                        <div class="prop-title">ADDED ON</div>07-04-2024
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="button-section">
-                        <div class="button-container">
-                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
-                                Edit Details
-                            </button>
-                            <button id="analyze-button">
-                                Analyze
-                            </button>
+                        <div class="content-element">
+                            <div class="prop-title">ADDED ON</div>{{$device->added_on}}
+                        </div>
+                        <div class="horizontal"></div>
+                        <div class="button-section">
+                            <div class="button-container">
+                                <button class="edit-button" data-bs-toggle="modal" data-device-id="{{ $device->id }}" data-bs-target="#deviceModal">
+                                    Edit Details
+                                </button>
+                                <button id="analyze-button">
+                                    Analyze
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="my-device">
-                <div class="device-image">
-                    <img src="{{ asset('images/6.jpg') }}" id="titleimage" alt="Title Image">
-                </div>
-                <div class="device-content">
-                    <div class="content-element">
-                        <div class="prop-title">ID</div>FFRER43
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">NAME</div>Industry Humidity Seonor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">TYPE</div>Humidity Sensor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">DATA TYPE</div>Numeric
-                    </div>
-                    <div class="horizontal"></div>
-
-                    <div class="content-element">
-                        <div class="prop-title">ADDED ON</div>05-04-2024
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="button-section">
-                        <div class="button-container">
-                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
-                                Edit Details
-                            </button>
-                            <button id="analyze-button">
-                                Analyze
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="my-device">
-                <div class="device-image">
-                    <img src="{{ asset('images/5.jpg') }}" id="titleimage" alt="Title Image">
-                </div>
-                <div class="device-content">
-                    <div class="content-element">
-                        <div class="prop-title">ID</div>CCDERE3
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">NAME</div>Garage Smoke Seonor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">TYPE</div>Smoke Sensor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">DATA TYPE</div>Numeric
-                    </div>
-                    <div class="horizontal"></div>
-
-                    <div class="content-element">
-                        <div class="prop-title">ADDED ON</div>09-04-2024
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="button-section">
-                        <div class="button-container">
-                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
-                                Edit Details
-                            </button>
-                            <button id="analyze-button">
-                                Analyze
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="my-device">
-                <div class="device-image">
-                    <img src="{{ asset('images/4.jpg') }}" id="titleimage" alt="Title Image">
-                </div>
-                <div class="device-content">
-                    <div class="content-element">
-                        <div class="prop-title">ID</div>KKRRKES
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">NAME</div>Car Temperature Sensor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">TYPE</div>Temperature Sensor
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="content-element">
-                        <div class="prop-title">DATA TYPE</div>Numeric
-                    </div>
-                    <div class="horizontal"></div>
-
-                    <div class="content-element">
-                        <div class="prop-title">ADDED ON</div>10-04-2024
-                    </div>
-                    <div class="horizontal"></div>
-                    <div class="button-section">
-                        <div class="button-container">
-                            <button id="edit-button" data-bs-toggle="modal" data-bs-target="#deviceModal">
-                                Edit Details
-                            </button>
-                            <button id="analyze-button">
-                                Analyze
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @empty
+                <div class="no-devices">You dont have any devices yet</div>
+            @endforelse
         </div>
     </div>
 
     @include('components.device-modal')
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('scripts/dashboard.js') }}"></script>
+
+    <x-footer/>
 </x-app-layout>

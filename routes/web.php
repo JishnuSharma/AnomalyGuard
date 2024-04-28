@@ -19,11 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
+
+    // User dashboard
+    Route::get('/dashboard', [DeviceManagementController::class,'dispayDevices'])->name('dashboard');
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -31,6 +31,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/dbscanalgorithm',[DeviceManagementController::class,'displayAlgorithmDetails'])->name('about-algorithm');
     Route::get('/devicefiles',[DeviceManagementController::class,'displayDeviceFiles']);
     Route::get('/datanalysis',[DeviceManagementController::class,'displayAnalysisPanel']);
+
+    // Submitting device forms
+    Route::post('/createdevice',[DeviceManagementController::class,'createDevice']);
+    Route::get('/devicedata',[DeviceManagementController::class,'getDevice']);
+    Route::post('/updatedevice',[DeviceManagementController::class,'updateDevice']);
+
 });
 
 require __DIR__.'/auth.php';

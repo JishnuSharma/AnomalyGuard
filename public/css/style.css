@@ -129,7 +129,7 @@
     border-radius: 10px;
 }
 
-#edit-button
+.edit-button
 {
     background-color: rgb(145, 19, 171);
 }
@@ -602,4 +602,11 @@
     font-size: 19px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+.no-devices
+{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 150px;
 }

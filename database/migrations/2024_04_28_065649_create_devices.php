@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
+            $table->integer('user_id')->nullable();
             $table->string('device_id')->nullable();
             $table->string('device_name')->nullable();
             $table->string('device_type')->nullable();
-            $table->string('device_description')->nullable();
             $table->string('data_type')->nullable();
             $table->date('added_on')->nullable();
             $table->timestamps();
