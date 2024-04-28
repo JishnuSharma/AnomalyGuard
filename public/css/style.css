@@ -431,3 +431,175 @@
     font-size: 20px;
     padding: 20px;
 }
+
+/* FOOTER */
+
+.footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    background-color: #28282B;
+    color: white;
+    margin-top: 80px;
+    padding: 50px;
+    font-size: 18px;
+}
+
+.footer li
+{
+    cursor: pointer;
+}
+
+.footer i
+{
+    cursor: pointer;
+}
+
+.left-footer
+{
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    width: 60%;
+    line-height: 40px;
+}
+
+.right-footer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.socials
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.social-icons
+{
+    font-size: 35px;
+}
+
+.newsletter
+{
+    margin-top: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.newsletter form
+{
+    width: 100%;
+}
+
+.newsletter input[type=text]
+{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-size: 20px;
+    border: none;
+    color: #28282B;
+}
+
+.newsletter input[type=submit]
+{
+    border: 1px solid white;
+    padding: 5px 10px 5px 5px ;
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 7px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* ABOUT THE ALGORITHM PAGE */
+
+.algo-head-section
+{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding: 40px 0px 40px 0px;
+    width: 100%;
+}
+
+.algo-heading-title
+{
+    text-align: left;
+    padding: 0;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.what-algo-section
+{
+    text-align: justify;
+    font-size: 19px;
+    line-height: 40px;
+}
+
+.what-algo-section li
+{
+    list-style-type: disc;
+    margin-left: 60px;
+}
+
+.algo-dividor
+{
+    height: 5px;
+    background-color: #28282B;
+    width: 200px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.sub-working-head
+{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.working-content-section
+{
+    font-size: 19px;
+}
+
+.algo-param-section ol
+{
+    list-style-type: decimal;
+    margin-left: 20px;
+    line-height: 40px;
+}
+
+.algo-param-section ul
+{
+    list-style: disc;
+    margin-left: 40px;
+    line-height: 40px;
+}
+
+.holding-images
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image-subtitle
+{
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 10px;
+}

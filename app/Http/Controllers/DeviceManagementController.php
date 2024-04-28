@@ -17,4 +17,9 @@ class DeviceManagementController extends Controller
     {
         return view('analyzeplatform');
     }
+
+    public function displayAlgorithmDetails()
+    {
+        return view('aboutalgorithm');
+    }
 }

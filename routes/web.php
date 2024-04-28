@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-
+    Route::get('/dbscanalgorithm',[DeviceManagementController::class,'displayAlgorithmDetails'])->name('about-algorithm');
     Route::get('/devicefiles',[DeviceManagementController::class,'displayDeviceFiles']);
     Route::get('/datanalysis',[DeviceManagementController::class,'displayAnalysisPanel']);
 });
