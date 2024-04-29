@@ -29,13 +29,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/dbscanalgorithm',[DeviceManagementController::class,'displayAlgorithmDetails'])->name('about-algorithm');
-    Route::get('/devicefiles',[DeviceManagementController::class,'displayDeviceFiles']);
     Route::get('/datanalysis',[DeviceManagementController::class,'displayAnalysisPanel']);
 
     // Submitting device forms
     Route::post('/createdevice',[DeviceManagementController::class,'createDevice']);
     Route::get('/devicedata',[DeviceManagementController::class,'getDevice']);
     Route::post('/updatedevice',[DeviceManagementController::class,'updateDevice']);
+
+    // Device listings for files
+    Route::get('/devicefiles/{id}',[DeviceManagementController::class,'displayDeviceFiles'])->name('filelisting');
+    Route::post('/savefiles',[DeviceManagementController::class,'saveFiles'])->name('save-files');
 
 });
 

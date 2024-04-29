@@ -49,9 +49,7 @@
                                 <button class="edit-button" data-bs-toggle="modal" data-device-id="{{ $device->id }}" data-bs-target="#deviceModal">
                                     Edit Details
                                 </button>
-                                <button id="analyze-button">
-                                    Analyze
-                                </button>
+                                <a id="analyze-button" href="{{ route('filelisting',['id'=> $device->id]) }}">Analyze</a>
                             </div>
                         </div>
                     </div>

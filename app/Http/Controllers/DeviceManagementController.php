@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Device;
+use App\Models\DeviceFile;
 use Illuminate\Http\Request;
 
 class DeviceManagementController extends Controller
@@ -17,9 +18,11 @@ class DeviceManagementController extends Controller
     }
 
 
-    public function displayDeviceFiles()
+    public function displayDeviceFiles($id)
     {
-        return view('uploadedfiles');
+        $files_data = DeviceFile::where('user_id',auth()->user()->id)->where('device_id',$id)->get();
+
+        return view('uploadedfiles',compact('files_data'));
     }
 
     public function displayAnalysisPanel()

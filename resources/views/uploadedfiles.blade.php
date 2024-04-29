@@ -27,100 +27,38 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php $counter = 1; @endphp
+                    @forelse($files_data as $file)
+                        <tr>
+                            <td class="p-3">
+                                {{ $counter }}
+                            </td>
+                            <td>
+                                temperature_data.xlsx
+                            </td>
+                            <td>
+                                <button class="btn btn-primary">
+                                    Analyze
+                                </button>
+                            </td>
+                            <td>
+                                <button class="btn btn-danger">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                        @php $counter++; @endphp
+                    @empty
                     <tr>
-                        <td class="p-3">
-                            1
-                        </td>
-                        <td>
-                            temperature_data.xlsx
-                        </td>
-                        <td>
-                            <button class="btn btn-primary">
-                                Analyze
-                            </button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger">
-                                Delete
-                            </button>
-                        </td>
+                        <td colspan="4" class="text-center">You dont have any files uploaded for the device</td>
                     </tr>
-                    <tr>
-                        <td class="p-3">
-                            2
-                        </td>
-                        <td>
-                            smoke_data.xlsx
-                        </td>
-                        <td>
-                            <button class="btn btn-primary">
-                                Analyze
-                            </button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="p-3">
-                            3
-                        </td>
-                        <td>
-                            motion_data.xlsx
-                        </td>
-                        <td>
-                            <button class="btn btn-primary">
-                                Analyze
-                            </button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="p-3">
-                            4
-                        </td>
-                        <td>
-                            rfid_data.xlsx
-                        </td>
-                        <td>
-                            <button class="btn btn-primary">
-                                Analyze
-                            </button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="p-3">
-                            5
-                        </td>
-                        <td>
-                            humidity_data.xlsx
-                        </td>
-                        <td>
-                            <button class="btn btn-primary">
-                                Analyze
-                            </button>
-                        </td>
-                        <td>
-                            <button class="btn btn-danger">
-                                Delete
-                            </button>
-                        </td>
-                    </tr>
+                    @endforelse 
                 </tbody>
             </table>
         </div>
     </div>
 
     @include('components.upload-file')
+
+    <script src="{{asset('scripts/files.js')}}"></script>
 </x-app-layout>
