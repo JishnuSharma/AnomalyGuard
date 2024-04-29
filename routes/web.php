@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
 
     // Device listings for files
     Route::get('/devicefiles/{id}',[DeviceManagementController::class,'displayDeviceFiles'])->name('filelisting');
-    Route::post('/savefiles',[DeviceManagementController::class,'saveFiles'])->name('save-files');
+    Route::post('/savefiles',[DeviceManagementController::class,'saveFiles'])->name('savefiles');
 
 });
 

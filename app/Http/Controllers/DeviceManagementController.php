@@ -96,4 +96,9 @@ class DeviceManagementController extends Controller
             return response()->json(['success' => false, 'message' => $th->getMessage()], 500);
         }
     }
+
+    public function saveFiles(Request $request)
+    {
+        
+    }
 }
