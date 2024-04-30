@@ -11,9 +11,9 @@
                 Uploaded Files
             </div>
             <div class="heading-button">
-                <button id="add-new-device" data-bs-toggle="modal" data-bs-target="#fileUploadModal">
-                    Analyze New File
-                </button>
+            <button id="add-new-device" data-bs-toggle="modal" data-bs-target="#fileUploadModal"{{ $files_data->count() >= 5 ? ' disabled' : '' }}>
+                Analyze New File
+            </button>
             </div>
         </div>
         <div class="container-fluid">
@@ -34,7 +34,7 @@
                                 {{ $counter }}
                             </td>
                             <td>
-                                temperature_data.xlsx
+                                {{$file->file_name}}
                             </td>
                             <td>
                                 <button class="btn btn-primary">
@@ -42,7 +42,7 @@
                                 </button>
                             </td>
                             <td>
-                                <button class="btn btn-danger">
+                                <button class="btn btn-danger" id="deleteFile" data-file-id="{{$file->id}}">
                                     Delete
                                 </button>
                             </td>
@@ -60,5 +60,7 @@
 
     @include('components.upload-file')
 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{asset('scripts/files.js')}}"></script>
 </x-app-layout>
