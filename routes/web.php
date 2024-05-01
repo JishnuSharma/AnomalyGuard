@@ -29,8 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/dbscanalgorithm',[DeviceManagementController::class,'displayAlgorithmDetails'])->name('about-algorithm');
-    Route::get('/datanalysis',[DeviceManagementController::class,'displayAnalysisPanel']);
-
+    
     // Submitting device forms
     Route::post('/createdevice',[DeviceManagementController::class,'createDevice']);
     Route::get('/devicedata',[DeviceManagementController::class,'getDevice']);
@@ -40,6 +39,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/devicefiles/{id}',[DeviceManagementController::class,'displayDeviceFiles'])->name('filelisting');
     Route::post('/savefiles',[DeviceManagementController::class,'saveFiles'])->name('savefiles');
     Route::get('/delete-file/{fileId}',[DeviceManagementController::class,'deleteFile'])->name('deletefile');
+
+    // Data processing routes
+    Route::post('/datanalysis',[DeviceManagementController::class,'displayAnalysisPanel'])->name('analyzefile');
+    Route::post('/processdata',[DeviceManagementController::class,'processData'])->name('processdata');
+    Route::get('/getprocessfile/{id}',[DeviceManagementController::class,'getRequestFile'])->name('requestfile');
 
 });
 

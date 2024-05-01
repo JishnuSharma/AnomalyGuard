@@ -17,49 +17,48 @@
             </div>
         </div>
         <div class="form-section col-10 px-4">
-            <form action="#" method="post">
+            <form action="#" id="processDataForm" method="post">
+                @csrf
                 <div class="row">
                     <div class="col-md-4">
                         <div class="analysis-form">
                             <label for="file_name" class="form-label">Select File</label>
-                            <select name="file_name" id="filename" class="form-select">
-                                <option value="select-file-name">Select file</option>
-                                <option value="select-file-name">First File</option>
-                                <option value="select-file-name">Second File</option>
-                                <option value="select-file-name">Third File</option>
-                                <option value="select-file-name">Fourth File</option>
-                                <option value="select-file-name">Fifth File</option>
+                            <select name="file_id" id="filename" class="form-select">
+                                    <option value="#">Select File</option>
+                                @foreach($files as $file)
+                                    <option value="{{$file->id}}" {{($file->id==$file_id) ? 'selected' : ''}}>{{$file->file_name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="analysis-form">
                             <label for="epsilon" class="form-label">Epsilon Value</label>
-                            <input type="text" name="epsilon" class="form-control" placeholder="Enter epsilon value">
+                            <input type="text" id="epsilon" name="epsilon" class="form-control" placeholder="Enter epsilon value">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="analysis-form">
                             <label for="min_pts" class="form-label">MinPts Value</label>
-                            <input type="text" name="min_pts" class="form-control" placeholder="Enter minimum points">
+                            <input type="number" id="min_pts" name="min_pts" class="form-control" placeholder="Enter minimum points">
                         </div>
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="analysis-form">
                             <label for="min_pts" class="form-label">Minimum Value</label>
-                            <input type="text" name="min_pts" class="form-control" placeholder="Enter minimum value">
+                            <input type="number" id="minimum_value" name="minimum_value" class="form-control" placeholder="Enter minimum value">
                         </div>
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="analysis-form">
                             <label for="min_pts" class="form-label">Maximum Value</label>
-                            <input type="text" name="min_pts" class="form-control" placeholder="Enter maximum value">
+                            <input type="number" id="maximum_value" name="maximum_value" class="form-control" placeholder="Enter maximum value">
                         </div>
                     </div>
                     <div class="col-md-4 mt-3">
                         <div class="analysis-form">
                             <label for="min_pts" class="form-label">Acceptable anomaly percentage</label>
-                            <input type="text" name="min_pts" class="form-control" placeholder="Enter percentage value">
+                            <input type="number" id="acceptable_percentage" name="acceptable_percentage" class="form-control" placeholder="Enter percentage value">
                         </div>
                     </div>
                     <div class="col-md-3 mt-3">
@@ -70,6 +69,8 @@
                 </div>
             </form>
         </div>
+        <div id="imageContainer"></div>
+
         <div class="heading-title mt-4 pt-4" id="statical-headiing">
             Statistical Derived
         </div>
@@ -129,6 +130,10 @@
             </div>
         </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{asset('scripts/process.js')}}"></script>
 
     @include('components.analysis-instructions')
 </x-app-layout>

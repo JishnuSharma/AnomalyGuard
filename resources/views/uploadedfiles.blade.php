@@ -37,9 +37,14 @@
                                 {{$file->file_name}}
                             </td>
                             <td>
-                                <button class="btn btn-primary">
-                                    Analyze
-                                </button>
+                                <form action="{{ route('analyzefile') }}" method="POST">
+                                    @csrf
+                                    <input type="hidden" name="file_id" value="{{ $file->id }}">
+                                    <input type="hidden" name="device_id" value="{{ $file->device_id }}">
+                                    <button type="submit" class="btn btn-primary">
+                                        Analyze
+                                    </button>
+                                </form>
                             </td>
                             <td>
                                 <button class="btn btn-danger" id="deleteFile" data-file-id="{{$file->id}}">

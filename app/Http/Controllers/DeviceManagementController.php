@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Device;
 use App\Models\DeviceFile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
 class DeviceManagementController extends Controller
@@ -25,11 +26,6 @@ class DeviceManagementController extends Controller
         $device_id = $id;
 
         return view('uploadedfiles',compact('files_data','device_id'));
-    }
-
-    public function displayAnalysisPanel()
-    {
-        return view('analyzeplatform');
     }
 
     public function displayAlgorithmDetails()
@@ -147,4 +143,30 @@ class DeviceManagementController extends Controller
         }
     }
 
+    public function displayAnalysisPanel(Request $request)
+    {
+        $file_id = $request->file_id;
+        $device_id = $request->device_id;
+
+        $files = DeviceFile::where('user_id',auth()->user()->id)->where('device_id',$device_id)->get();
+
+        return view('analyzeplatform',compact('files','file_id'));
+    }
+
+    public function getRequestFile($file_id)
+    {
+        $file = DeviceFile::find($file_id);
+
+        if (!$file) {
+            return response()->json(['error' => 'File not found'], 404);
+        }
+
+        $file_path = storage_path('app/' . $file->file_path);
+
+        if (!file_exists($file_path)) {
+            return response()->json(['error' => 'File not found in storage'], 404);
+        }
+
+        return response()->download($file_path, basename($file_path));
+    }
 }
