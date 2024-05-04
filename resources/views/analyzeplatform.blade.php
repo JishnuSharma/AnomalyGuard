@@ -69,65 +69,64 @@
                 </div>
             </form>
         </div>
-        <div id="imageContainer"></div>
 
-        <div class="heading-title mt-4 pt-4" id="statical-headiing">
+        <div class="heading-title mt-4 pt-4 fordisplayspecification" id="statical-headiing">
             Statistical Derived
         </div>
-        <div class="col-12 mt-4 pt-4 d-flex align-items-center justify-content-center">
-            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
-                <div class="metric-heading">
+        <div class="col-12 mt-4 pt-4 d-flex align-items-center justify-content-center fordisplayspecification">
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column fordisplayspecification">
+                <div class="metric-heading fordisplayspecification">
                     Total Number of Readings
                 </div>
-                <div class="metric-value">
+                <div class="metric-value fordisplayspecification" id="totalreadings">
                     18439
                 </div>
             </div>
-            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
-                <div class="metric-heading">
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column fordisplayspecification">
+                <div class="metric-heading fordisplayspecification">
                     Total Number of Anomalies
                 </div>
-                <div class="metric-value">
+                <div class="metric-value fordisplayspecification" id="totalanomalies">
                     1774
                 </div>
             </div>
-            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
-                <div class="metric-heading">
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column fordisplayspecification">
+                <div class="metric-heading fordisplayspecification">
                     Percentage of Anomalies
                 </div>
-                <div class="metric-value">
+                <div class="metric-value fordisplayspecification" id="percentanomalies">
                     9.6%
                 </div>
             </div>
-            <div class="col-3 d-flex align-items-center justiy-content-center flex-column">
-                <div class="metric-heading">
+            <div class="col-3 d-flex align-items-center justiy-content-center flex-column fordisplayspecification">
+                <div class="metric-heading fordisplayspecification">
                     Device Status
                 </div>
-                <div class="metric-value correct">
+                <div class="metric-value correct fordisplayspecification" id="feedback">
                     Functioning Properly
                 </div>
             </div>
         </div>
-        <div class="heading-title mt-4 pt-4" id="statical-headiing">
+        <div class="heading-title mt-4 pt-4 fordisplayspecification" id="statical-headiing">
             Visual Derived
         </div>
-        <div class="container mb-4 pb-4">
+        <div class="container mb-4 pb-4 fordisplayspecification" >
             <div class="row justify-content-center d-flex flex-column align-items-center mb-4 ">
-                <div class="col-auto">
-                    <img src="{{ asset('images/like1.jpg') }}" class="img-fluid static-images" width="800" alt="Title Image">
+                <div class="col-auto" id="imageContainer">
+                    
                 </div>
                 <div class="col-auto image-descriptions mt-4 ">
                     Scattter Plot for The Dataset
                 </div>
             </div>
-            <div class="row justify-content-center d-flex align-items-center flex-column">
+            <!-- <div class="row justify-content-center d-flex align-items-center flex-column">
                 <div class="col-auto">
                     <img src="{{ asset('images/like3.jpg') }}" class="img-fluid" width="800"  alt="Title Image">
                 </div>
                 <div class="col-auto image-descriptions mt-4 ">
                     Bar Chart Plot for The Dataset
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

@@ -1,14 +1,20 @@
-$(document).ready(function() {
+$(document).ready(function() 
+{
+    $('.fordisplayspecification').css({
+        'display': 'none'
+    });
+    
+
     $('#processDataForm').submit(function(event) {
         event.preventDefault(); 
         
         let file_id = $('#filename').val();
-        // Fetch the file first
+
         $.ajax({
             url: `/getprocessfile/${file_id}`,
             type: 'GET',
-            success: function(fileData) {
-                // Once the file is fetched, proceed with the main AJAX call
+            success: function(fileData) 
+            {
                 let epsilon = $('#epsilon').val();
                 let minPts = $('#min_pts').val();
                 let minimumValue = $('#minimum_value').val();
@@ -37,26 +43,21 @@ $(document).ready(function() {
                     processData: false,
                     contentType: false,
                     success: function(data) {
+
+                        $('.fordisplayspecification').css({
+                            'display': 'block'
+                        });
+
                         console.log(data);
-                        $('#totalReadings').text(data.total_readings);
-                        $('#totalAnomalies').text(data.total_anomalies);
-                        $('#percentageAnomalies').text(data.percentage_anomalies);
+                        $('#totalreadings').text(data.total_readings);
+                        $('#totalanomalies').text(data.total_anomalies);
+                        $('#percentanomalies').text(data.percentage_anomalies.toFixed(4));
                         $('#feedback').text(data.feedback);
-                        
-                        // Create image element and set its source to the returned image data
-                        // let img = $('<img />', {
-                        //     src: 'data:image/png;base64,' + data.image_data // Assuming image data is returned as base64 string
-                        // });
-                        
-                        // // Append the image to a container in your HTML
-                        // $('#imageContainer').empty(); // Clear previous image, if any
-                        // $('#imageContainer').append(img);
 
                         let img = new Image();
                         img.src = 'data:image/png;base64,' + data.image_data;
                         
-                        // Append the image to a container in your HTML
-                        $('#imageContainer').empty(); // Clear previous image, if any
+                        $('#imageContainer').empty(); 
                         $('#imageContainer').append(img);
                     },
                     error: function(xhr, status, error) {
