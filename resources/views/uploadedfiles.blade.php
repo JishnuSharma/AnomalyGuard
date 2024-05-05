@@ -41,7 +41,7 @@
                                     @csrf
                                     <input type="hidden" name="file_id" value="{{ $file->id }}">
                                     <input type="hidden" name="device_id" value="{{ $file->device_id }}">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn" style="background-color:#59E4A8; color: white;">
                                         Analyze
                                     </button>
                                 </form>

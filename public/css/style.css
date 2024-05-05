@@ -131,12 +131,12 @@
 
 .edit-button
 {
-    background-color: rgb(145, 19, 171);
+    background-color: #59E4A8;
 }
 
 #analyze-button
 {
-    background-color: rgb(26, 26, 117);
+    background-color: #243f33;
     padding: 7px 14px 7px 14px;
     border-radius: 10px;
     color: white;
