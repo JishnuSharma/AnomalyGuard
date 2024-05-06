@@ -11,9 +11,12 @@
                 Uploaded Files
             </div>
             <div class="heading-button">
-            <button id="add-new-device" data-bs-toggle="modal" data-bs-target="#fileUploadModal"{{ $files_data->count() >= 5 ? ' disabled' : '' }}>
+            <button id="add-new-device" data-bs-toggle="modal" data-bs-target="#fileUploadModal" {{ $files_data->count() >= 5 ? 'disabled' : '' }}>
                 Analyze New File
             </button>
+            <br/>
+            <br/>
+            {{ $files_data->count() >= 5 ? '*Please remove existing file to upload a new one' : '' }}
             </div>
         </div>
         <div class="container-fluid">
@@ -47,7 +50,7 @@
                                 </form>
                             </td>
                             <td>
-                                <button class="btn btn-danger" id="deleteFile" data-file-id="{{$file->id}}">
+                                <button class="btn btn-danger deleteFile" data-file-id="{{$file->id}}">
                                     Delete
                                 </button>
                             </td>

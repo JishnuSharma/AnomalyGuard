@@ -35,8 +35,7 @@ $(document).ready(function()
         });
     });
 
-
-    $('#deleteFile').on('click', function() {
+    $('.deleteFile').on('click', function() {
         let fileId = $(this).data('file-id');
     
         // Show confirmation dialog
