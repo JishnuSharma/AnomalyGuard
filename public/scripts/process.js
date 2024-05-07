@@ -58,7 +58,7 @@ $(document).ready(function()
                         img.src = 'data:image/png;base64,' + data.image_data;
                         
                         $('#imageContainer').empty(); 
-                        $('#imageContainer').append(img);
+                        $('#imageContainer').append(img)
                     },
                     error: function(xhr, status, error) {
                         console.error('Error:', error);

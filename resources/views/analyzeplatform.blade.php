@@ -112,11 +112,11 @@
         </div>
         <div class="container mb-4 pb-4 fordisplayspecification" >
             <div class="row justify-content-center d-flex flex-column align-items-center mb-4 ">
-                <div class="col-auto" id="imageContainer">
+                <div class="col-auto result-image" id="imageContainer">
                     
                 </div>
                 <div class="col-auto image-descriptions mt-4 ">
-                    Scattter Plot for The Dataset
+                    Scatter Plot for The Dataset
                 </div>
             </div>
             <!-- <div class="row justify-content-center d-flex align-items-center flex-column">
@@ -135,4 +135,6 @@
     <script src="{{asset('scripts/process.js')}}"></script>
 
     @include('components.analysis-instructions')
+
+    <x-footer/>
 </x-app-layout>
