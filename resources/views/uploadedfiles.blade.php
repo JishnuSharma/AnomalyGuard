@@ -71,4 +71,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{asset('scripts/files.js')}}"></script>
+    <br/>
+    <br>
+    <br>
+    <x-footer/>
 </x-app-layout>

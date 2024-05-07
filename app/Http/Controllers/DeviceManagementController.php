@@ -99,15 +99,23 @@ class DeviceManagementController extends Controller
     {
         if ($request->hasFile('file')) 
         {
+            $allowedExtensions = ['csv', 'xlsx'];
+            $file = $request->file('file');
+            $extension = $file->getClientOriginalExtension();
+
+            if (!in_array($extension, $allowedExtensions)) 
+            {
+                return response()->json(['error' => 'Only CSV or Excel (XLSX) files are allowed.'], 400);
+            }
+
             $userId = auth()->user()->id; 
             $directory = 'uploads/' . $userId;
-            
+
             if (!Storage::exists($directory)) 
             {
                 Storage::makeDirectory($directory);
             }
 
-            $file = $request->file('file');
             $originalFilename = $file->getClientOriginalName();
             $filePath = $file->storeAs($directory, $originalFilename);
 

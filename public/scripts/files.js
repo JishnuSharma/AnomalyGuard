@@ -31,6 +31,16 @@ $(document).ready(function()
             },
             error: function(xhr, status, error) {
                 console.error(xhr.responseText);
+
+                let errorMessage = JSON.parse(xhr.responseText).error;
+                if (errorMessage) 
+                {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: errorMessage
+                    });
+                }
             }
         });
     });
