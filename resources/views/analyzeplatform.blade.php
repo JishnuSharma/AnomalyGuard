@@ -40,7 +40,7 @@
                     <div class="col-md-4">
                         <div class="analysis-form">
                             <label for="min_pts" class="form-label">MinPts Value</label>
-                            <input type="number" id="min_pts" name="min_pts" class="form-control" placeholder="Enter minimum points">
+                            <input type="text" id="min_pts" name="min_pts" class="form-control" placeholder="Enter minimum points">
                         </div>
                     </div>
                     <div class="col-md-4 mt-3">

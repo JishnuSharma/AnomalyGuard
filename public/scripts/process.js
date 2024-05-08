@@ -15,11 +15,11 @@ $(document).ready(function()
             type: 'GET',
             success: function(fileData) 
             {
-                let epsilon = $('#epsilon').val();
-                let minPts = $('#min_pts').val();
-                let minimumValue = $('#minimum_value').val();
-                let maximumValue = $('#maximum_value').val();
-                let acceptablePercentage = $('#acceptable_percentage').val();
+                let epsilon = parseFloat($('#epsilon').val());
+                let minPts = parseFloat($('#min_pts').val());
+                let minimumValue = parseInt($('#minimum_value').val());
+                let maximumValue = parseFloat($('#maximum_value').val());
+                let acceptablePercentage = parseFloat($('#acceptable_percentage').val());
                 
                 // Construct FormData object to append form fields and file
                 let formData = new FormData();
@@ -52,7 +52,19 @@ $(document).ready(function()
                         $('#totalreadings').text(data.total_readings);
                         $('#totalanomalies').text(data.total_anomalies);
                         $('#percentanomalies').text(data.percentage_anomalies.toFixed(4));
-                        $('#feedback').text(data.feedback);
+                        
+                        let feedback = data.feedback;
+
+                        if (feedback === "Requires Attention") 
+                        {
+                            $('#feedback').css('background-color', 'red'); 
+                            $('#feedback').text(data.feedback);
+                        } 
+                        else if (feedback === "Stable") 
+                        {
+                            $('#feedback').css('background-color', '#b9ffa6'); 
+                            $('#feedback').text(data.feedback);
+                        }
 
                         let img = new Image();
                         img.src = 'data:image/png;base64,' + data.image_data;
